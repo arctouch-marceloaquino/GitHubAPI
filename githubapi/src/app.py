@@ -7,7 +7,3 @@ flask_api = Api(app=app, title="GitHub's API reader",
           description="This API consumes GitHub's API in order to retrieve user's repo informations")
 
 flask_api.add_namespace(user_namespace, path='/users')
-
-
-
-#flask_api.init_app(app)

@@ -21,10 +21,10 @@ class TestViewUser(unittest.TestCase):
 
   def test_get_repos(self):
     response = self.user_repos.get(username=self.user.login)
-    repos_list = json.loads(response.content)
+    repos_list = json.loads(json.dumps(response))
     self.assertEqual(len(repos_list), self.user.public_repos)
 
   def test_get_repo_details(self):
     response = self.user_repo_details.get(self.user.login, self.repo_name)
-    repo_details = json.loads(response.content)
+    repo_details = json.loads(json.dumps(response))
     self.assertEqual(repo_details['name'], self.repo_name)
