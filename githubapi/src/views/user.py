@@ -1,5 +1,5 @@
 from flask_restx import Namespace, Resource
-from src.api import git_api
+from ..api import git_api
 
 user_namespace = Namespace('users', 'Users repo information ')
 

@@ -18,4 +18,3 @@ class TestModelUser(unittest.TestCase):
     self.assertEqual('Marcelo Aquino', self.user.name)
     self.assertEqual(17485700, self.user.id)
     self.assertEqual('MarceloAquino7', self.user.login)
-    self.assertEqual(5, self.user.followers)

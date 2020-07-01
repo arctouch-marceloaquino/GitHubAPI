@@ -11,8 +11,7 @@ class BaseAPI(object):
       self.timeout = timeoutConnection
 
   def get(self, url):
-    request = requests.get(url, headers=None, timeout=4)
-    return request
+    return requests.get(url, headers=None, timeout=4)
 
   def post(self, url, data):
     raise NotImplementedError
